@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         String index = findIndex(regular);
         blockView.setText(index);
-        //String currentS = new SimpleDateFormat("HH:mm", Locale.US).format(new Date());
-        String currentS = "13:55";
+        String currentS = new SimpleDateFormat("HH:mm", Locale.US).format(new Date());
+        //String currentS = "13:55";
         DateTime current = df.parseLocalTime(currentS).toDateTimeToday();
 
         if (index != "--") {
@@ -144,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
     public String findIndex(JSONObject schedule) throws JSONException {
         Iterator keys = schedule.keys();
 
-        //String currentS = new SimpleDateFormat("HH:mm", Locale.US).format(new Date());
-        String currentS = "13:55";
+        String currentS = new SimpleDateFormat("HH:mm", Locale.US).format(new Date());
+        //String currentS = "13:55";
 
         DateTimeFormatter df = DateTimeFormat.forPattern("HH:mm");
         DateTime current = df.parseLocalTime(currentS).toDateTimeToday();
